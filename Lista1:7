@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n, seq_atual = 0, seq_anterior = 1, seq_auxiliar;
+
+    printf("Digite a quantidade de termos? ");
+    scanf("%d", &n);
+
+    printf("Sequencia de Fibonacci com %d termos:\n", n);
+
+    if (n == 0) {
+        return 0;
+    }
+
+    printf("%d ", seq_atual);
+
+    while (n > 1) {
+        seq_auxiliar = seq_atual;
+        seq_atual += seq_anterior;
+        seq_anterior = seq_auxiliar;
+
+        printf("%d ", seq_atual);
+
+        n--;
+    }
+
+    printf("\n");
+
+    return 0;
+}
